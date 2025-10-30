@@ -1,0 +1,11 @@
+<nav class="category-filter" aria-label="Channel categories">
+  <button
+    type="button"
+    class="category-filter__pill"
+    [class.category-filter__pill--active]="category === activeCategory"
+    *ngFor="let category of categories; trackBy: trackByCategory"
+    (click)="onCategorySelect(category)"
+  >
+    {{ category }}
+  </button>
+</nav>

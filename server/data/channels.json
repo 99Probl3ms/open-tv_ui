@@ -1,0 +1,42 @@
+[
+  {
+    "id": "nba-tv",
+    "name": "NBA TV",
+    "category": "League Pass",
+    "favorite": true,
+    "logo": "assets/logos/nba.svg",
+    "streamUrl": "http://localhost:3000/streams/nba-tv.m3u8",
+    "epgId": "nba.tv",
+    "lastWatched": "2024-03-12T23:10:00Z"
+  },
+  {
+    "id": "nba-tv-backup",
+    "name": "NBA TV (Backup)",
+    "category": "League Pass",
+    "favorite": false,
+    "logo": "assets/logos/nba.svg",
+    "streamUrl": "http://localhost:3000/streams/nba-tv-backup.m3u8",
+    "epgId": "nba.tv.backup",
+    "lastWatched": "2024-03-10T18:45:00Z"
+  },
+  {
+    "id": "nba-wizards",
+    "name": "NBA 01: Wizards (WAS)",
+    "category": "East",
+    "favorite": false,
+    "logo": "assets/logos/wizards.svg",
+    "streamUrl": "http://localhost:3000/streams/nba-wizards.m3u8",
+    "epgId": "nba.wizards",
+    "lastWatched": "2024-03-05T02:15:00Z"
+  },
+  {
+    "id": "nba-bucks",
+    "name": "NBA 03: Bucks (MIL)",
+    "category": "East",
+    "favorite": false,
+    "logo": "assets/logos/bucks.svg",
+    "streamUrl": "http://localhost:3000/streams/nba-bucks.m3u8",
+    "epgId": "nba.bucks",
+    "lastWatched": "2024-02-28T21:00:00Z"
+  }
+]
