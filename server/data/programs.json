@@ -1,0 +1,79 @@
+[
+  {
+    "channelId": "nba-tv",
+    "title": "Avalanche @ Devils Pregame",
+    "description": "Studio breakdown and live look-ins before the puck drops.",
+    "startOffset": -60,
+    "duration": 30
+  },
+  {
+    "channelId": "nba-tv",
+    "title": "Avalanche @ Devils",
+    "description": "Live coverage of the Colorado Avalanche facing the New Jersey Devils.",
+    "startOffset": -30,
+    "duration": 150
+  },
+  {
+    "channelId": "nba-tv",
+    "title": "Postgame Highlights",
+    "description": "Extended highlights and analysis from around the league.",
+    "startOffset": 120,
+    "duration": 60
+  },
+  {
+    "channelId": "nba-tv-backup",
+    "title": "Avalanche @ Devils (Alt Feed)",
+    "description": "Alternate commentary stream for the featured matchup.",
+    "startOffset": -20,
+    "duration": 150
+  },
+  {
+    "channelId": "nba-tv-backup",
+    "title": "Around the League",
+    "description": "Whip-around coverage of the other NBA games in progress.",
+    "startOffset": 140,
+    "duration": 60
+  },
+  {
+    "channelId": "nba-wizards",
+    "title": "Wizards Warm-Up",
+    "description": "Team walkthrough and analysis from the arena.",
+    "startOffset": -45,
+    "duration": 30
+  },
+  {
+    "channelId": "nba-wizards",
+    "title": "Wizards vs. Cavaliers",
+    "description": "Full game broadcast from Capital One Arena.",
+    "startOffset": -15,
+    "duration": 150
+  },
+  {
+    "channelId": "nba-wizards",
+    "title": "Wizards Postgame Live",
+    "description": "Player interviews and highlights after the game.",
+    "startOffset": 135,
+    "duration": 45
+  },
+  {
+    "channelId": "nba-bucks",
+    "title": "Bucks Countdown",
+    "description": "Giannis and company prepare for tip-off in Milwaukee.",
+    "startOffset": -30,
+    "duration": 30
+  },
+  {
+    "channelId": "nba-bucks",
+    "title": "Bucks vs. Celtics",
+    "description": "Eastern Conference showdown live from Fiserv Forum.",
+    "startOffset": 0,
+    "duration": 150
+  },
+  {
+    "channelId": "nba-bucks",
+    "title": "Inside the Bucks",
+    "description": "Documentary series following the Bucks locker room.",
+    "startOffset": 150,
+    "duration": 60
+  }
+]

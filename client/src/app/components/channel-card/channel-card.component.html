@@ -1,0 +1,32 @@
+<article class="card" tabindex="0" (click)="onSelect()">
+  <div class="card__media">
+    <img [src]="channel.logo" [alt]="channel.name" loading="lazy" />
+    <div class="card__overlay"></div>
+  </div>
+  <div class="card__body">
+    <header class="card__header">
+      <span class="card__category">{{ channel.category }}</span>
+      <button
+        type="button"
+        class="card__favorite"
+        [attr.aria-pressed]="channel.favorite"
+        (click)="onToggleFavorite($event)"
+      >
+        <span class="material-symbols-rounded" aria-hidden="true">
+          {{ channel.favorite ? 'favorite' : 'favorite_border' }}
+        </span>
+        <span class="sr-only">Toggle favorite</span>
+      </button>
+    </header>
+    <h3 class="card__title">{{ channel.name }}</h3>
+    <p class="card__program" *ngIf="channel.currentProgram as current">
+      Now: <strong>{{ current.title }}</strong>
+    </p>
+    <p class="card__program" *ngIf="!channel.currentProgram">Schedule coming up</p>
+    <ul class="card__upcoming" *ngIf="channel.upcomingPrograms.length > 0">
+      <li *ngFor="let program of channel.upcomingPrograms | slice : 0 : 2">
+        {{ program.start | date : 'shortTime' }} • {{ program.title }}
+      </li>
+    </ul>
+  </div>
+</article>
