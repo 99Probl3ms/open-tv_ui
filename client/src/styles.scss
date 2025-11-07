@@ -1,0 +1,41 @@
+@use 'sass:color';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+}
+
+button {
+  font: inherit;
+}
+
+input, button {
+  color: inherit;
+}
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.25rem;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url('https://fonts.gstatic.com/s/materialsymbolsrounded/v170/syl0-zNym6YjUruM-QrG5R1fr2QQLrQO4LM.woff2') format('woff2');
+}

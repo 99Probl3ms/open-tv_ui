@@ -1,0 +1,66 @@
+<main class="layout">
+  <header class="layout__header">
+    <div class="layout__title">
+      <h1>Viewing: NBA League Pass</h1>
+      <p class="layout__subtitle">Browse the live channels and catch the latest matchups.</p>
+    </div>
+
+    <div class="toolbar">
+      <label class="search" aria-label="Search channels">
+        <span class="material-symbols-rounded" aria-hidden="true">search</span>
+        <input
+          type="search"
+          placeholder="Type to search..."
+          [ngModel]="searchTerm()"
+          (ngModelChange)="onSearch($event)"
+        />
+      </label>
+
+      <nav class="tabs" aria-label="Channel group filters">
+        <button
+          type="button"
+          class="tabs__item"
+          *ngFor="let tab of tabs"
+          [class.tabs__item--active]="tab.id === activeTab()"
+          (click)="onTabChange(tab.id)"
+        >
+          {{ tab.label }}
+        </button>
+      </nav>
+    </div>
+
+    <app-category-filter
+      *ngIf="activeTab() === 'all' || activeTab() === 'categories'"
+      [categories]="categories()"
+      [activeCategory]="activeCategory()"
+      (categoryChange)="onCategoryChange($event)"
+    ></app-category-filter>
+  </header>
+
+  <section class="state state--info" *ngIf="usingFallback() && !isLoading() && !error()">
+    <span class="material-symbols-rounded" aria-hidden="true">wifi_off</span>
+    <p>Showing offline sample data. Start the mock backend to see live guide updates.</p>
+  </section>
+
+  <section class="state" *ngIf="isLoading()">
+    <div class="state__spinner"></div>
+    <p>Loading channels…</p>
+  </section>
+
+  <section class="state state--error" *ngIf="!isLoading() && error()">
+    <p>{{ error() }}</p>
+  </section>
+
+  <section class="grid" *ngIf="!isLoading() && !error()">
+    <p class="state state--empty" *ngIf="visibleChannels().length === 0">
+      Nothing to show yet. Try a different search or category.
+    </p>
+
+    <app-channel-card
+      *ngFor="let channel of visibleChannels()"
+      [channel]="channel"
+      (favoriteToggled)="onFavoriteToggled($event)"
+      (channelSelected)="onChannelSelected($event)"
+    ></app-channel-card>
+  </section>
+</main>
